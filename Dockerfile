@@ -24,11 +24,6 @@ COPY . .
 RUN composer install
 RUN composer require laravel/octane spiral/roadrunner
 
-RUN npm install --global yarn
-RUN yarn
-RUN yarn prod
-
-
 RUN php artisan key:generate
 RUN php artisan octane:install --server="swoole"
 
