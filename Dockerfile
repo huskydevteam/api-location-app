@@ -32,5 +32,4 @@ RUN yarn prod
 RUN php artisan key:generate
 RUN php artisan octane:install --server="swoole"
 
-CMD php artisan octane:start --server="swoole" --host="0.0.0.0" 
 EXPOSE 8000
