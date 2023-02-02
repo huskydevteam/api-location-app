@@ -29,7 +29,6 @@ RUN yarn
 
 RUN php artisan key:generate
 RUN php artisan octane:install --server="swoole"
-RUN php artisan make:migrations
 RUN php artisan migrate:fresh
  
 EXPOSE 8000
