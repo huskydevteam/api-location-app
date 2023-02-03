@@ -2,7 +2,7 @@
 builder = "dockerfile"
 
 [deploy]
-startCommand = "sh -c 'php artisan migrate:fresh && php artisan octane:start --server=swoole --host=0.0.0.0'"
+startCommand = "sh -c 'php artisan migrate:fresh --seed && php artisan octane:start --server=swoole --host=0.0.0.0'"
 healthcheckPath = "/"
 healthcheckTimeout = 500
 restartPolicyType = "never"

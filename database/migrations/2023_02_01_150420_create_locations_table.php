@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('titulo')->unique();
             $table->string('descripcion')->nullable();
-            $table->string('longitud');
-            $table->string('latitud');
+            $table->decimal('longitud',10,4);
+            $table->decimal('latitud',10,4);
             $table->timestamps();
         });
     }
